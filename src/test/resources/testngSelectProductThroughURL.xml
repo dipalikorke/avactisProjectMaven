@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<listeners>	
+    	<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+    	<listener class-name="org.uncommons.reportng.			"/>
+     </listeners>
+	<!-- FF : Firefox, IE : Internet Explorer, CH : Chrome, SF : Safari -->
+	<parameter name="browser" value="CH"></parameter>
+	<!-- Above this line do not delete anything -->
+    
+  <test name="Test">
+    <parameter name="platform" value="Windows" />
+	<parameter name="browser" value="CH" />
+	<parameter name="version" value="" />  
+   	<groups>
+  		   	<run>
+ 				<include name="Login" />
+ 				<exclude name="testOrder" />
+ 				<include name="testOrder2" />
+ 				<exclude name="Register" />
+   		 	</run>
+ 		</groups>
+    <classes>
+         <class name="com.avactis.test.integration.tests.TestSingleProductUsingURL"/>
+    </classes>
+  </test> <!-- Test -->
+  
+</suite> <!-- Suite -->
